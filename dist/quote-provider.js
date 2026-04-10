@@ -42,3 +42,4 @@ export class QuoteProvider {
         return this.quoteText('dad');
     }
 }
+//# sourceMappingURL=quote-provider.js.map

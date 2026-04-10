@@ -8,3 +8,4 @@ export const categories = {
     programming,
     dad,
 };
+//# sourceMappingURL=index.js.map

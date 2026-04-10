@@ -100,3 +100,4 @@ export const dad = [
     { quote: "What does a nosy pepper do? Gets jalapeño business.", author: "Unknown" },
     { quote: "How do cows stay up to date? They read the moos-paper.", author: "Unknown" },
 ];
+//# sourceMappingURL=dad.js.map

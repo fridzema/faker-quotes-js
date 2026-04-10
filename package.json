@@ -4,6 +4,7 @@
   "description": "A custom Faker provider for generating quotes. TypeScript port of fridzema/faker-quotes.",
   "type": "module",
   "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
@@ -11,6 +12,7 @@
       "import": "./dist/index.js"
     }
   },
+  "sideEffects": false,
   "files": [
     "dist"
   ],
@@ -20,6 +22,9 @@
     "test": "bun test",
     "lint": "oxlint",
     "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "peerDependencies": {
     "@faker-js/faker": "^9.0.0 || ^10.0.0"
@@ -35,12 +40,21 @@
     "quotes",
     "testing",
     "mock",
-    "data"
+    "data",
+    "typescript",
+    "faker-provider"
   ],
   "author": "fridzema",
   "license": "MIT",
+  "homepage": "https://github.com/fridzema/faker-quotes-js#readme",
+  "bugs": {
+    "url": "https://github.com/fridzema/faker-quotes-js/issues"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fridzema/faker-quotes-js"
+    "url": "git+https://github.com/fridzema/faker-quotes-js.git"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

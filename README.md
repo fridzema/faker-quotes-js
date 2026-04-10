@@ -8,23 +8,25 @@ Includes quotes across 4 categories: inspirational, funny, programming, and dad 
 
 Install both this package and its peer dependency `@faker-js/faker`:
 
+### From npm
+
+```bash
+bun add -d @faker-js/faker @fridzema/faker-quotes
+```
+
+```bash
+npm install -D @faker-js/faker @fridzema/faker-quotes
+```
+
+### From GitHub
+
 ```bash
 bun add -d @faker-js/faker fridzema/faker-quotes-js
 ```
 
-With npm:
-
 ```bash
 npm install -D @faker-js/faker fridzema/faker-quotes-js
 ```
-
-With pnpm:
-
-```bash
-pnpm add -D @faker-js/faker fridzema/faker-quotes-js
-```
-
-> **Note:** The package is installed from GitHub. The `@faker-js/faker` peer dependency must be installed separately.
 
 ## Usage
 

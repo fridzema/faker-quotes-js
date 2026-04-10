@@ -50,3 +50,4 @@ export const funny = [
     { quote: "If you think you are too small to make a difference, try sleeping with a mosquito.", author: "Dalai Lama" },
     { quote: "I find television very educating. Every time somebody turns on the set, I go into the other room and read a book.", author: "Groucho Marx" },
 ];
+//# sourceMappingURL=funny.js.map

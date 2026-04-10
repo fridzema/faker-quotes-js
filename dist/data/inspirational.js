@@ -64,3 +64,4 @@ export const inspirational = [
     { quote: "Success is not final, failure is not fatal: It is the courage to continue that counts.", author: "Winston Churchill" },
     { quote: "Success is not measured by what you accomplish, but by the opposition you have encountered, and the courage with which you have maintained the struggle against overwhelming odds.", author: "Orison Swett Marden" },
 ];
+//# sourceMappingURL=inspirational.js.map
