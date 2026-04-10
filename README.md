@@ -6,77 +6,67 @@ Includes quotes across 4 categories: inspirational, funny, programming, and dad 
 
 ## Installation
 
-### Using Bun
+Install both this package and its peer dependency `@faker-js/faker`:
+
 ```bash
-bun add -d @fridzema/faker-quotes
+bun add -d @faker-js/faker fridzema/faker-quotes-js
 ```
 
-### Using npm
+With npm:
+
 ```bash
-npm install --save-dev @fridzema/faker-quotes
+npm install -D @faker-js/faker fridzema/faker-quotes-js
 ```
 
-### Using pnpm
+With pnpm:
+
 ```bash
-pnpm add -D @fridzema/faker-quotes
+pnpm add -D @faker-js/faker fridzema/faker-quotes-js
 ```
 
-**Note:** `@faker-js/faker` is required as a peer dependency.
+> **Note:** The package is installed from GitHub. The `@faker-js/faker` peer dependency must be installed separately.
 
 ## Usage
 
-### Basic Usage
-
 ```typescript
 import { QuoteProvider } from '@fridzema/faker-quotes';
-import { Faker } from '@faker-js/faker';
 
-const faker = new Faker();
-const quoteProvider = new QuoteProvider(faker);
+const quotes = new QuoteProvider();
 
-// Get a random quote from any category
-quoteProvider.quote();
-
-// Get a quote from a specific category
-quoteProvider.quote('dad');
-
-// Get only the quote text
-quoteProvider.quoteText();
-
-// Get only the author
-quoteProvider.quoteAuthor();
-
-// Get quotes from specific categories
-quoteProvider.funny();
-quoteProvider.inspirational();
-quoteProvider.programming();
-quoteProvider.dad();
+quotes.quote();              // { quote: '...', author: '...', category: 'funny' }
+quotes.quote('dad');         // { quote: '...', author: '...', category: 'dad' }
+quotes.quoteText();          // 'The best way to get started is...'
+quotes.quoteAuthor();        // 'Walt Disney'
+quotes.funny();              // random funny quote text
+quotes.inspirational();      // random inspirational quote text
+quotes.programming();        // random programming quote text
+quotes.dad();                // random dad joke text
 ```
 
-### Seeded Faker
+### With a seeded Faker instance
+
+For deterministic/reproducible output, pass a seeded Faker instance:
 
 ```typescript
+import { faker } from '@faker-js/faker';
 import { QuoteProvider } from '@fridzema/faker-quotes';
-import { Faker } from '@faker-js/faker';
 
-const faker = new Faker();
-faker.seed(123); // For reproducible results
-
-const quoteProvider = new QuoteProvider(faker);
-const quote = quoteProvider.funny();
+faker.seed(123);
+const quotes = new QuoteProvider(faker);
+quotes.funny(); // always returns the same quote for seed 123
 ```
 
 ## Available Methods
 
 | Method | Returns | Description |
 |--------|---------|-------------|
-| `quote(category?)` | `Quote` | Get a random quote, optionally from a specific category |
-| `quoteText(category?)` | `string` | Get just the quote text |
-| `quoteAuthor(category?)` | `string` | Get just the author name |
-| `funny()` | `Quote` | Get a funny quote |
-| `inspirational()` | `Quote` | Get an inspirational quote |
-| `programming()` | `Quote` | Get a programming quote |
-| `dad()` | `Quote` | Get a dad joke |
+| `quote(category?)` | `Quote` | Random quote object `{ quote, author, category }` |
+| `quoteText(category?)` | `string` | Random quote text |
+| `quoteAuthor(category?)` | `string` | Random quote author |
+| `funny()` | `string` | Random funny quote text |
+| `inspirational()` | `string` | Random inspirational quote text |
+| `programming()` | `string` | Random programming quote text |
+| `dad()` | `string` | Random dad joke text |
 
 ## Types
 
@@ -84,7 +74,7 @@ const quote = quoteProvider.funny();
 type Category = 'inspirational' | 'funny' | 'programming' | 'dad';
 
 interface Quote {
-  text: string;
+  quote: string;
   author: string;
   category: Category;
 }
@@ -92,28 +82,11 @@ interface Quote {
 
 ## Development
 
-### Install dependencies
 ```bash
 bun install
-```
-
-### Run tests
-```bash
 bun test
-```
-
-### Run linter
-```bash
 bun run lint
-```
-
-### Run type checking
-```bash
 bun run typecheck
-```
-
-### Build the project
-```bash
 bun run build
 ```
 
