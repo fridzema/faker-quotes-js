@@ -1,6 +1,6 @@
 import { faker as defaultFaker, type Faker } from '@faker-js/faker';
-import { categories } from './data/index';
-import type { Category, Quote } from './types';
+import { categories } from './data/index.js';
+import type { Category, Quote } from './types.js';
 
 export class QuoteProvider {
   private readonly faker: Faker;

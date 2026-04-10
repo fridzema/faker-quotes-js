@@ -1,4 +1,4 @@
-import type { Quote } from '../types';
+import type { Quote } from '../types.js';
 
 export const inspirational: Omit<Quote, 'category'>[] = [
   { quote: "The best way to get started is to quit talking and begin doing.", author: "Walt Disney" },

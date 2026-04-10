@@ -1,5 +1,5 @@
 import { faker as defaultFaker } from '@faker-js/faker';
-import { categories } from './data/index';
+import { categories } from './data/index.js';
 export class QuoteProvider {
     faker;
     allQuotes;

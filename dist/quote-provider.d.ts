@@ -1,5 +1,5 @@
 import { type Faker } from '@faker-js/faker';
-import type { Category, Quote } from './types';
+import type { Category, Quote } from './types.js';
 export declare class QuoteProvider {
     private readonly faker;
     private readonly allQuotes;

@@ -1,1 +1,1 @@
-export { QuoteProvider } from './quote-provider';
+export { QuoteProvider } from './quote-provider.js';

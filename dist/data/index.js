@@ -1,7 +1,7 @@
-import { dad } from './dad';
-import { funny } from './funny';
-import { inspirational } from './inspirational';
-import { programming } from './programming';
+import { dad } from './dad.js';
+import { funny } from './funny.js';
+import { inspirational } from './inspirational.js';
+import { programming } from './programming.js';
 export const categories = {
     inspirational,
     funny,

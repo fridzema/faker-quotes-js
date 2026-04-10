@@ -1,4 +1,4 @@
-import type { Quote } from '../types';
+import type { Quote } from '../types.js';
 
 export const funny: Omit<Quote, 'category'>[] = [
   { quote: "I used to think I was indecisive, but now I am not too sure.", author: "Unknown" },

@@ -1,4 +1,4 @@
-import type { Quote } from '../types';
+import type { Quote } from '../types.js';
 
 export const programming: Omit<Quote, 'category'>[] = [
   { quote: "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.", author: "Martin Fowler" },
