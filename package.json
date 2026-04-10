@@ -16,14 +16,16 @@
   ],
   "scripts": {
     "build": "tsc",
+    "prepare": "tsc",
     "test": "bun test",
     "lint": "oxlint",
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
-    "@faker-js/faker": "^10.4.0"
+    "@faker-js/faker": "^9.0.0 || ^10.0.0"
   },
   "devDependencies": {
+    "@faker-js/faker": "^10.4.0",
     "@types/bun": "^1.3.11",
     "oxlint": "^1.59.0",
     "typescript": "^6.0.2"
