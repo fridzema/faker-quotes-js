@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'bun:test';
 import { faker } from '@faker-js/faker';
 import { QuoteProvider } from '../src/quote-provider';
-import type { Category, Quote } from '../src/types';
+import type { Category } from '../src/types';
 
 describe('QuoteProvider', () => {
   describe('construction', () => {
